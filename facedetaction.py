@@ -7,19 +7,21 @@ cap.set(4, 800)
 riaan_image = face_recognition.load_image_file("riaan shah.jpg")
 sashwat_image = face_recognition.load_image_file("sashwat jain.jpg")
 malhar_image = face_recognition.load_image_file("malhar shah.jpg")
+rishi_image = face_recognition.load_image_file("rishi ranjan.jpg")
 
 # load all images(faces)
 
 riaan_encoding = face_recognition.face_encodings(riaan_image)[0]
 sashwat_encoding = face_recognition.face_encodings(sashwat_image)[0]
 malhar_encoding = face_recognition.face_encodings(malhar_image)[0]
-
+rishi_encoding = face_recognition.face_encodings(rishi_image)[0]
 # encode all faces
 
 known_face_encodings = [
     sashwat_encoding,
     riaan_encoding,
-    malhar_encoding
+    malhar_encoding,
+    rishi_encoding
 ]
 
 #setup a known database of encodings
@@ -27,7 +29,8 @@ known_face_encodings = [
 known_face_names = [
     "Sashwat Jain",
     "Riaan Shah",
-    "Malhar Shah"
+    "Malhar Shah",
+    "Rishi Ranjan",
 ]
 
 #setup a known database of names
